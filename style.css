@@ -1,0 +1,152 @@
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body
+{
+    background-color: var(--Pale-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+p
+{
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.6;
+    color: var(--Desaturated-blue);
+
+}
+.bg_container {
+  background-image: url('./images/pattern-background-mobile.svg') ;
+  background-repeat: no-repeat;
+  position: center;
+  background-size: cover;
+ height: 50vh;
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+z-index: -1;
+}
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px var(--Desaturated-blue);
+/* height: 70vh; */
+}
+.container h1{
+    margin-bottom: 8px;
+}
+.container>.hero {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 0 0;
+}
+.container p.desc
+{
+    padding: 0 30px;
+}
+.sm_box
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+    background-color: var(--Very-pale-blue);
+    width: 90%;
+    border-radius: 10px;
+    padding: 10px;
+}
+.sm-sm
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sm-sm img{
+    margin-right: 12px;
+}
+.change
+{
+    color: var(--Bright-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.buttons
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.button_class
+{
+    border: none;
+    color: white;
+    width: 100%;
+    font-weight: 900;
+    font-size: 16px;
+    background-color: var(--Bright-blue);
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow:  0px 10px 10px rgb(177, 171, 171);
+    margin: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.button_class:hover,.change:hover
+{
+    opacity: 0.8;
+}
+.cancel
+{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+}
+
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px)
+{
+    .bg_container
+    {
+        background-image: url('./images/pattern-background-desktop.svg');
+        /* background-repeat: repeat; */
+        position: center;
+        background-size: contain;
+        height: 100vh;
+    }
+    .container{
+        width: 500px;
+    }
+}
